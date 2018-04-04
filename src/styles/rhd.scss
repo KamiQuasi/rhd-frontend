@@ -1,5 +1,9 @@
 @import "fonts/fonts";
 @import "colors";
+@import "global";
+@import "keycloak-pages";
+@import "learning-paths";
+@import "assembly";
 
 * { box-sizing: border-box; font-family: "overpass"; }
 body { margin: 0; padding: 0; }
