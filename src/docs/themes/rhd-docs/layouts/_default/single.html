@@ -21,16 +21,14 @@
 {{ end }}
 
 {{ define "scripts"}}
-    {{ $baseUrl := .Site.BaseURL }}
+    {{ $rhd_script := (resources.Get "@rhd/rhd.js").Permalink }}
+    {{ $pfe_script := (resources.Get "@patternfly/pfelement/pfelement.umd.js").Permalink }}
     {{ with .Param "scripts" }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/s.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/extras/named-register.min.js"></script>
+    <script src="{{ $pfe_script }}"></script>
+    <script src="{{ $rhd_script }}"></script>
     <script>
-        var require = {
-            baseUrl: "{{ $baseUrl }}",
-            deps: [{{ range . }}{{ with resources.Get (delimit (slice . "js") ".") }}
-           "{{ strings.TrimPrefix "/" (strings.TrimSuffix ".js" .RelPermalink) }}",
-            {{ end }}{{ end }}]
-        };
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    System.import("dp-alert")</script>
     {{ end }}
 {{ end }}
