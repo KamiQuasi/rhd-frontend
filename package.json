@@ -7,24 +7,27 @@
     "node": ">=10.16.2"
   },
   "scripts": {
-    "start": "npm run del && npm run scripts && npm run styles",
+    "start": "npm run del && npm run copy && npm run scripts && npm run styles",
     "build": "npm run scripts:build",
     "serve": "spandx -c spandx.config.dev.js",
     "test": "karma start",
     "del": "del dist && del \"node_modules/@rhd/**\" ",
     "del:styles": "del \"dist/css**\" && del node_modules/@rhd**",
     "fix:fa": "rename -n \"node_modules/@fortawesome/!(fontawesome-common-types)/index.d.ts\" index.es.d.ts",
-    "scripts": "npm run scripts:old && npm run scripts:new",
+    "scripts": "npm run scripts:tsc && npm run scripts:old && npm run scripts:new",
     "scripts:build": "npm run del && npm run scripts:old && tsc -p tsconfig.prod.json && npm run scripts:copy",
     "scripts:copy": "copyfiles -u 2 \"node_modules/@patternfly/**/*\" \"dist/js/@patternfly\" && copyfiles -u 2 \"node_modules/@fortawesome/**/*\" \"dist/js/@fortawesome/\"",
-    "scripts:new": "uglifyjs-folder src/components -p \"**/*.js\" -e -c -o dist/components/ --source-map",
-    "scripts:old": "uglifyjs-folder src/global -c -o dist/global/rhd/rhd.min.js --source-map",
+    "scripts:new": "uglifyjs-folder node_modules/@rhd/components -p \"**/*.js\" -e -c -o dist/components/ --source-map",
+    "scripts:old": "uglifyjs-folder node_modules/@rhd/global -c -o dist/global/rhd/rhd.min.js --source-map",
+    "scripts:tsc": "tsc -p tsconfig.prod.json && rollup -c",
     "scripts:microsites": "uglifyjs-folder src/scripts/js/microsites -c -o dist/js/@rhd/rhd.microsites.min.js --source-map",
     "scripts:umd": "cd node_modules/@rhd && each '**/*.js' -- rollup -f umd -n RHD -o ../../dist/js/@rhd/%p $PWD/%p",
     "semantic-release": "semantic-release",
-    "styles": "npm run styles:copy && npm run styles:sass",
-    "styles:sass": "node-sass node_modules/@rhd/components/ -o dist/components/ && node-sass node_modules/@rhd/global -o dist/global/ --output-style compressed && postcss dist/global/",
-    "styles:copy": "copyfiles -u 2 \"src/styles/**/*\" node_modules/@rhd"
+    "styles": "npm run styles:global && npm run styles:components",
+    "styles:global": "node-sass node_modules/@rhd/global -o dist/global/rhd/ --output-style compressed",
+    "saved:styles": " && postcss dist/global/rhd --dir dist/global/rhd --ext .min.css",
+    "styles:components": "node-sass node_modules/@rhd/components/ -o dist/components/ --output-style compressed",
+    "copy": "copyfiles -u 1 \"src/{global,components}/**/*\" node_modules/@rhd"
   },
   "sass": {
     "includePaths": [

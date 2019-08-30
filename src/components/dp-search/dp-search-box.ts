@@ -1,7 +1,7 @@
 // import {PFElement} from '../../@pfelements/pfelement.umd.js';
 import { library, icon, dom } from '@fortawesome/fontawesome-svg-core/index'
 import {faSearch} from '@fortawesome/pro-solid-svg-icons/index';
-import PFElement from '@patternfly/pfelement/pfelement.umd';
+import {PFElement} from '@patternfly/pfelement/pfelement';
 
 library.add(faSearch);
 
@@ -9,7 +9,7 @@ const searchIcon = icon(faSearch,{ transform: {
     size: 18
     }}).html;
 
-export default class DPSearchBox extends PFElement {
+export class DPSearchBox extends PFElement {
     get html() {
         return `
         <style>

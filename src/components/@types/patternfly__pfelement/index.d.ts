@@ -1,7 +1,5 @@
 export as namespace PFElement;
 
-export = PFElement;
-
 interface IPFElement {
     readonly tag: string;
     schemaUrl?: string;
@@ -23,7 +21,7 @@ interface IPFElementDependency {
     type?: string;
     id?: string;
 }
-declare class PFElement extends HTMLElement {
+export declare class PFElement extends HTMLElement {
     connected: boolean;
     _pfeClass: IPFElement;
     tag: string;

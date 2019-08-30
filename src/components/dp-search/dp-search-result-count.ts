@@ -1,7 +1,7 @@
 // import {PFElement} from '../../@pfelements/pfelement.umd.js';
-import PFElement from '@patternfly/pfelement/pfelement.umd';
+import {PFElement} from '@patternfly/pfelement/pfelement';
 
-export default class DPSearchResultCount extends PFElement {
+export class DPSearchResultCount extends PFElement {
     get html() {
         return `
         ${this.term || this.count ? `

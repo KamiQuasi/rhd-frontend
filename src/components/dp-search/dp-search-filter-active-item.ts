@@ -1,12 +1,12 @@
 // import {PFElement} from '../../@pfelements/pfelement.umd.js';
 import { library, icon, dom } from '@fortawesome/fontawesome-svg-core/index'
 import {faTimes} from '@fortawesome/pro-solid-svg-icons/index';
-import PFElement from '@patternfly/pfelement/pfelement.umd';
+import {PFElement} from '@patternfly/pfelement/pfelement';
 
 library.add(faTimes);
 const timesIcon = icon(faTimes).html;
 
-export default class DPSearchFilterActiveItem extends PFElement {
+export class DPSearchFilterActiveItem extends PFElement {
     get html() {
         return `${this.active ? `
         <style>

@@ -1,13 +1,13 @@
 //import {PFElement} from '../../@pfelements/pfelement.umd.js';
 import { library, icon, dom } from '@fortawesome/fontawesome-svg-core/index'
 import {faChevronRight} from '@fortawesome/pro-solid-svg-icons/index';
-import PFElement from '@patternfly/pfelement/pfelement.umd';
-import DPSearchFilterItem from './dp-search-filter-item';
+import {PFElement} from '@patternfly/pfelement/pfelement';
+import {DPSearchFilterItem} from './dp-search-filter-item';
 
 library.add(faChevronRight);
 const chevronRightIcon = icon(faChevronRight).html;
 
-export default class DPSearchFilterGroup extends PFElement {
+export class DPSearchFilterGroup extends PFElement {
     get html() {
         return `
         <style>

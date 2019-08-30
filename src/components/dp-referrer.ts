@@ -1,4 +1,4 @@
-import PFElement from '@patternfly/pfelement/pfelement.umd';
+import {PFElement} from '@patternfly/pfelement/pfelement';
 
 export default class DPReferrer extends PFElement {
   get html() {

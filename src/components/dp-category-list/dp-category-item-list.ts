@@ -1,7 +1,7 @@
-import PFElement from '@patternfly/pfelement/pfelement.umd';
-// import PFElement from '@patternfly/pfelement/pfelement.umd';
+import {PFElement} from '@patternfly/pfelement/pfelement';
+// import {PFElement} from '@patternfly/pfelement/pfelement';
 
-export default class DPCategoryItemList extends PFElement {
+export class DPCategoryItemList extends PFElement {
     get html() {
         return `
             <style>

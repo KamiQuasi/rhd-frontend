@@ -1,8 +1,8 @@
 //import {PFElement} from '../../@pfelements/pfelement.umd.js';
-import PFElement from '@patternfly/pfelement/pfelement.umd';
-import DPSearchFilterItem from './dp-search-filter-item';
+import {PFElement} from '@patternfly/pfelement/pfelement';
+import {DPSearchFilterItem} from './dp-search-filter-item';
 
-export default class DPSearchQuery extends PFElement {
+export class DPSearchQuery extends PFElement {
 
     get html() { return ''; }
     static get tag() { return 'dp-search-query'; }

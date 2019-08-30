@@ -1,8 +1,8 @@
 //import {PFElement} from '../../@pfelements/pfelement.umd.js';
-import PFElement from '@patternfly/pfelement/pfelement.umd';
-import DPSearchResult from './dp-search-result';
+import {PFElement} from '@patternfly/pfelement/pfelement';
+import {DPSearchResult} from './dp-search-result';
 
-export default class DPSearchResults extends PFElement {
+export class DPSearchResults extends PFElement {
     get html() {
         return `
         <style>

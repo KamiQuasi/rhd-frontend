@@ -1,8 +1,8 @@
 //import {PFElement} from '../../@pfelements/pfelement.umd.js';
-import PFElement from '@patternfly/pfelement/pfelement.umd';
-import DPCategoryItemList from './dp-category-item-list';
+import {PFElement} from '@patternfly/pfelement/pfelement';
+import {DPCategoryItemList} from './dp-category-item-list';
 
-export default class DPCategoryList extends PFElement {
+export class DPCategoryList extends PFElement {
     get html() {
         return `
 <style>
