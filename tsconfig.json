@@ -12,14 +12,14 @@
         "esModuleInterop": true,
         "pretty": true,
         "strictBindCallApply": false,
-        "baseUrl": "src/scripts",
+        "baseUrl": "src/components",
         "allowJs": true,
-        "rootDirs": ["node_modules", "src/scripts"],
+        "rootDirs": ["node_modules", "src/components"],
         "lib":[
           "dom", "es5", "dom.iterable", "es6"
         ],
         //"outFile": "dist/js/rhd.js",
-        "outDir": "dist/js/@rhd/",
+        "outDir": "dist/components/",
         "paths": {
             "@patternfly/pfelement/pfelement.umd": [
                 "@types/patternfly__pfelement"
