@@ -45,8 +45,12 @@ disableFastRender = true
         target = "data"
 
     [[module.mounts]]
-        source = "src/styles"
-        target = "assets/sass"
+        source = "src/global"
+        target = "assets/css/global"
+    
+    [[module.mounts]]
+        source = "src/components"
+        target = "assets/css/components"
     
     [[module.mounts]]
         source = "node_modules/@patternfly"
@@ -57,7 +61,7 @@ disableFastRender = true
         target = "assets/@fortawesome"
     
     [[module.mounts]]
-        source = "dist/js/@rhd"
+        source = "dist/"
         target = "assets/@rhd"
     
     [[module.mounts]]

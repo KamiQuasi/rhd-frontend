@@ -121,27 +121,27 @@ $gutter: 30px;
 @import "2019/navigation";
 
 
-// :root {
+:root {
 //     --rhd-theme--color--grey-3: $grey-3;
 //     --rhd-gray-3: $gray-3;
 //     --rhd-gray-4: $gray-4;
 //     --rhd-blue: $blue;
 //     --rhd-linkhover: $linkhover;
 //     --rhd-white: $white;
-// }
+--rhd-theme--font-family: #{$rhd-font-stack-text};
+--rhd-theme--font-family--heading: $rhd-font-stack-display;
+}
 
 
 
 * {
   box-sizing: border-box;
   // font-family: "Overpass", "Open Sans", Arial, Helvetica, sans-serif;
-  --rhd-theme--font-family: $rhd-font-stack-text;
   font-family: $rhd-font-stack-text;
   font-family: var(--rhd-theme--font-family, $rhd-font-stack-text);
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: $rhd-font-stack-display;
-  --rhd-theme--font-family--heading: $rhd-font-stack-display;
+  font-family: #{$rhd-font-stack-display};
   font-family: var(--rhd-theme--font-family--heading, $rhd-font-stack-display);
 }
 

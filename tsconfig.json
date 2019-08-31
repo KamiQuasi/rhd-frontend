@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "umd",
+        "module": "es2015",
         "watch": true,
         "moduleResolution": "node",
         "target": "es5",
@@ -12,24 +12,27 @@
         "esModuleInterop": true,
         "pretty": true,
         "strictBindCallApply": false,
-        "baseUrl": "src/components",
+        "baseUrl": "src",
         "allowJs": true,
-        "rootDirs": ["node_modules", "src/components"],
+        "rootDirs": ["node_modules", "src"],
         "lib":[
           "dom", "es5", "dom.iterable", "es6"
         ],
         //"outFile": "dist/js/rhd.js",
-        "outDir": "node_modules/@rhd/components",
+        "outDir": "node_modules/@rhd",
         "paths": {
-            "@patternfly/pfelement/pfelement.umd": [
-                "@types/patternfly__pfelement"
-            ],
             "@patternfly/pfelement/pfelement": [
-                "@types/patternfly__pfelement"
+                "components/@types/patternfly__pfelement"
+            ],
+            "../../../@patternfly/pfelement/pfelement": [
+                "components/@types/patternfly__pfelement"
+            ],
+            "../../@patternfly/pfelement/pfelement": [
+                "components/@types/patternfly__pfelement"
             ]
         }
     },
     "include": [
-        "src/components/**/*.ts"       
+        "src/**/*.ts"       
     ]
 }

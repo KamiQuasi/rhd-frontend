@@ -18,12 +18,14 @@ $(function() {
 var $window = $(window);
 
 function checkWidth() {
-    var windowsize = document.body.clientWidth;;
+  if(document.body) {
+    var windowsize = document.body.clientWidth;
     if (windowsize <= 1170) {
       $(".menu-item--expanded").addClass("collapsed");
     }else {
       $(".menu-item--expanded").removeClass("collapsed");
     }
+  }
 };
 
 checkWidth();

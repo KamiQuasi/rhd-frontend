@@ -1,5 +1,5 @@
-import {PFElement} from '@patternfly/pfelement/pfelement';
-// import {PFElement} from '@patternfly/pfelement/pfelement';
+import {default as PFElement}  from '@patternfly/pfelement/pfelement';
+// import {default as PFElement}  from '@patternfly/pfelement/pfelement';
 
 export class DPCategoryItem extends PFElement {
     get html() {

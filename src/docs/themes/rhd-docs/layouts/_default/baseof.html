@@ -1,7 +1,7 @@
 {{ $patternfly := resources.Get "@patternfly/patternfly/patternfly.scss" | resources.ToCSS (dict "targetPath" "/css/patternfly.css" ) }}
 {{ $fontawesome := resources.Get "@fortawesome/fontawesome-pro/js/all.min.js" }}
 {{ $rhdoptions := (dict "targetPath" "/css/rhd.css" ) }}
-{{ $rhdstyle := resources.Get "sass/rhd.scss" | resources.ToCSS $rhdoptions }}
+{{ $rhdstyle := resources.Get "css/global/rhd.scss" | resources.ToCSS $rhdoptions }}
 <!DOCTYPE html>
 <html>
   <head>
@@ -27,9 +27,7 @@
     <!-- <script src="/js/require1k.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
-    <script src="{{ (resources.Get "@rhd/rhd.old.min.js").Permalink }}"></script>
-    <script src="{{ (resources.Get "@rhd/rhd.microsites.min.js").Permalink }}"></script>
-    <script src="{{ (resources.Get "@rhd/rhd.min.js").Permalink }}"></script>
+    <script src="{{ (resources.Get "@rhd/global/rhd/rhd.min.js").Permalink }}"></script>
 
   </head>
   <body>

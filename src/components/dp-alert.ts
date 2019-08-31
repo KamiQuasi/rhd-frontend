@@ -1,4 +1,4 @@
-import {PFElement} from '@patternfly/pfelement/pfelement';
+import {default as PFElement} from '@patternfly/pfelement/pfelement';
 import {library, icon} from '@fortawesome/fontawesome-svg-core/index';
 import {faTimes} from '@fortawesome/pro-solid-svg-icons/index';
 

@@ -1,5 +1,5 @@
-//import {PFElement} from '../../@pfelements/pfelement.umd.js';
-import {PFElement} from '@patternfly/pfelement/pfelement';
+//import {default as PFElement}  from '../../@pfelements/pfelement.umd.js';
+import {default as PFElement}  from '@patternfly/pfelement/pfelement';
 import {DPSearchURL} from './dp-search-url';
 import {DPSearchModalFilters} from './dp-search-modal-filters';
 
