@@ -1,4 +1,4 @@
-export default class RHDPSearchResult extends HTMLElement {
+class RHDPSearchResult extends HTMLElement {
     _result;
     _url;
     _title;

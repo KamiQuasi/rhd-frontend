@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
-        "module": "umd",
-        "watch": true,
+        "module": "none",
+        "watch": false,
         "moduleResolution": "node",
         "target": "es5",
         "noImplicitAny": false,
@@ -18,7 +18,7 @@
         "lib":[
           "dom", "es5", "dom.iterable", "es6"
         ],
-        //"outFile": "dist/js/rhd.js",
+        "outFile": "dist/js/@rhd/rhdp-search.js",
         "outDir": "dist/js/@rhd/",
         "paths": {
             "@patternfly/pfelement/pfelement.umd": [
@@ -30,6 +30,6 @@
         }
     },
     "include": [
-        "src/scripts/@rhd/**/*.ts"       
+        "src/scripts/@rhd/**/rhdp-search/*.ts"       
     ]
 }

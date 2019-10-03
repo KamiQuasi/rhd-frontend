@@ -89,7 +89,7 @@ rhdp-search-box {
     }
 
     button svg {
-        @include tablet-landscape {
+        @media (min-width: 768px) {
             display: none !important;
         }
     }
@@ -114,14 +114,14 @@ rhdp-search-result-count, rhdp-search-empty-query {
     }
 
     @media only screen and (max-width: 768px) {
-        border-bottom: 1px solid $grey-3;
+        border-bottom: 1px solid #cccccc;
     }
 }
 
 rhdp-search-sort-page {
     display: block;
     margin: 1em 0;
-    border-bottom: 1px solid $grey-4;
+    border-bottom: 1px solid #eeeeee;
 
     p { margin: 0; }
 
@@ -453,7 +453,7 @@ rhdp-search-results {
     }
     .end-of-results {
         text-align: center;
-        color: $grey-5;
+        color: #cccccc;
     }
 
     @media only screen and (max-width: 768px) {
@@ -465,7 +465,7 @@ rhdp-search-result {
     font-family: "Overpass", "Open Sans", Arial, Helvetica, sans-serif;
     margin-bottom: 25px;
     padding-bottom: 25px;
-    border-bottom: 1px solid $grey-3;
+    border-bottom: 1px solid #cccccc;
     display: flex;
     flex-direction: row;
 
@@ -504,7 +504,7 @@ rhdp-search-result {
         }
     .result-info span{
         font-size: .9rem;
-        color: $grey-6;
+        color: #efefef;
     }
 
     .caps {
@@ -677,7 +677,7 @@ rhdp-search-filter-item {
         }
 
         input:checked + label {
-            background: $accent-blue;
+            background: #0089d0;
         }
 
         input:checked + label:after  {
@@ -703,7 +703,7 @@ rhdp-search-filter-item {
 rhdp-search-onebox {
     div {
         display: block;
-        border: 1px solid $grey-3;
+        border: 1px solid #cccccc;
         padding: 25px;
         margin-bottom: 3em;
     }
@@ -726,7 +726,7 @@ rhdp-search-onebox {
                     text-decoration: underline;
 
                     svg {
-                        fill: $linkhover;
+                        fill: #004c98;
                     }
                 }
             }
@@ -741,7 +741,7 @@ rhdp-search-onebox {
         }
     }
 }
-@include desktop-small-and-down {
+@media only screen and (max-width: 1024px) {
     rhdp-search-onebox {
         ul.slots {
             display: block;
@@ -752,13 +752,13 @@ rhdp-search-onebox {
     }
 }
 
-@include tablet-landscape-768-and-down {
+@media only screen and (max-width: 768px) {
     rhdp-search-onebox {
         ul.slots li img{ max-width: 2em; }
     }
 }
 
-@include mobile-landscape-and-down {
+@media screen and (max-width: 480px) {
     rhdp-search-onebox {
         ul.slots { display: none; }
     }

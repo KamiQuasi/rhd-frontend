@@ -1,13 +1,13 @@
-import RHDPSearchURL from './rhdp-search-url';
-import RHDPSearchQuery from './rhdp-search-query';
-import RHDPSearchBox from './rhdp-search-box';
-import RHDPSearchResultCount from './rhdp-search-result-count';
-import RHDPSearchFilters from './rhdp-search-filters';
-import RHDPSearchOneBox from './rhdp-search-onebox';
-import RHDPSearchResults from './rhdp-search-results';
-import RHDPSearchSortPage from './rhdp-search-sort-page';
+// import RHDPSearchURL from './rhdp-search-url';
+// import RHDPSearchQuery from './rhdp-search-query';
+// import RHDPSearchBox from './rhdp-search-box';
+// import RHDPSearchResultCount from './rhdp-search-result-count';
+// import RHDPSearchFilters from './rhdp-search-filters';
+// import RHDPSearchOneBox from './rhdp-search-onebox';
+// import RHDPSearchResults from './rhdp-search-results';
+// import RHDPSearchSortPage from './rhdp-search-sort-page';
 
-export default class RHDPSearchApp extends HTMLElement {
+class RHDPSearchApp extends HTMLElement {
     constructor() {
         super();
         //this.toggleModal = this.toggleModal.bind(this);
@@ -51,7 +51,7 @@ export default class RHDPSearchApp extends HTMLElement {
 
     template = `<div class="row">
     <span class="search-outage-msg"></span>
-    <div class="large-24 medium-24 small-24 columns searchpage-middle">
+    <div class="pf-l-flex pf-m-column searchpage-middle">
         <div class="row">
             <div class="large-24 medium-24 small-24 columns">
                 <h2>${this.name}</h2>
