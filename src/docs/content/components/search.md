@@ -9,7 +9,7 @@ weight: 99
 scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
 ---
 
-{{< code >}}<dp-search-app url="https://dcp2.jboss.org/v2/rest/search/developer_materials">
+{{< code >}}<dp-search-app url="https://api.developers.redhat.com/search/">
 <dp-search-box slot="query"></dp-search-box>
 <dp-search-filters title="Filter By" slot="filters">
     <dp-search-filter-group name="CONTENT TYPE" name="type">

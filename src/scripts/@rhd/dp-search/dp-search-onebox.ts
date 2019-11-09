@@ -7,7 +7,7 @@ export default class DPSearchOneBox extends PFElement {
         ${this.feature ? `
         <style>
         :host {
-            border: 1px solid #d5d5d5;
+            border: 1px solid #EDEDED;
             display: block;
             margin-bottom: 3em;
             padding: 25px;
@@ -103,14 +103,35 @@ export default class DPSearchOneBox extends PFElement {
         }
         </style>
 
-    ${this.feature && this.feature.heading && this.feature.heading.url && this.feature.heading.text ? `<h4><a href="${this.feature.heading.url}">${this.feature.heading.text}</a></h4>` : ''}
-    ${this.feature && this.feature.details ? `<p>${this.feature.details}</p>` : ''}
+    ${this.feature && this.feature.heading && this.feature.heading.url && this.feature.heading.text ? `
+        <h4><a href="${this.feature.heading.url}">${this.feature.heading.text}</a></h4>
+    ` : ''}
+    ${this.feature && this.feature.subheading ? `
+        <h5>${this.feature.subheading}</h5>
+    `: ''}
+    ${this.feature && this.feature.details ? `
+        <p>${this.feature.details}</p>
+    ` : ''}
+    
     <div class="links">
-    ${this.feature && this.feature.button && this.feature.button.url && this.feature.button.text ? `<a href="${this.feature.button.url}?onebox=${this.feature.id}" class="button medium-cta blue">${this.feature.button.text}</a>` : ''}
+    ${this.feature && this.feature.button && this.feature.button.url && this.feature.button.text ? `
+        <a href="${this.feature.button.url}?onebox=${this.feature.id}" class="button medium-cta blue">${this.feature.button.text}</a>
+    ` : ''}
     ${this.feature && this.feature.slots && this.feature.slots.length > 0 ? `
         ${this.feature.slots.map(slot =>  this.slotTemplate`${slot}${this.feature.id}`).join('')}
     ` : ''}
-    </div>` : ''}`;
+    </div>
+    <div class="expand">
+    ${this.feature && this.feature.meta && this.feature.meta.length > 0 ? `
+        ${this.feature.meta.map(item =>  this.metaTemplate`${item}${this.feature.id}`).join('')}
+    ` : ''}
+        <ul>
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+        </ul>
+    </div>
+    ` : ''}`;
     }
 
     static get tag() { return 'dp-search-onebox'; }
@@ -173,6 +194,10 @@ export default class DPSearchOneBox extends PFElement {
 
     slotTemplate = (strings, slot, id) => {
         return `${slot && slot.url && slot.text ? `<a href="${slot.url}?onebox=${id}" class="link">${this.getIcon(slot.icon)}${slot.text}</a>` : ''}`;
+    }
+
+    metaTemplate = (strings, item, id) => {
+        return `${item && item.text ? `<li>${item.text}</li>` :''}`;
     }
 
     constructor() {
