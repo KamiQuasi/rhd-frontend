@@ -12,7 +12,7 @@ scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
 {{< code >}}<dp-search-app url="https://api.developers.redhat.com/search/">
 <dp-search-box slot="query"></dp-search-box>
 <dp-search-filters title="Filter By" slot="filters">
-    <dp-search-filter-group name="CONTENT TYPE" name="type">
+    <dp-search-filter-group name="Content type" name="type">
         <!-- <dp-search-filter-item group="type" key="topic_page" value="topic_page" name="Topic">Topic</dp-search-filter-item> -->
         <dp-search-filter-item group="type" key="article" value="article" name="Articles">Articles</dp-search-filter-item>
         <!-- <dp-search-filter-item group="type" key="product" value="product" name="Product">Product</dp-search-filter-item> -->
@@ -32,7 +32,7 @@ scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
         <!-- <dp-search-filter-item group="type" key="rhd_microsite" value="rhd_microsite" name="rhd_microsite">rhd_microsite</dp-search-filter-item> -->
         <!-- <dp-search-filter-item group="type" key="landing_page_single_offer" value="landing_page_single_offer" name="SOLP">SOLP</dp-search-filter-item> -->
     </dp-search-filter-group>
-    <dp-search-filter-group name="PRODUCT" name="product">
+    <dp-search-filter-group name="Product" name="product">
         <dp-search-filter-item group="rhd_taxonomy_product" facet="rhd_taxonomy_product" key="rhel" value="rhel" name="rhel">rhel</dp-search-filter-item>
         <dp-search-filter-item group="rhd_taxonomy_product" facet="rhd_taxonomy_product" key="openshift" value="openshift" name="OpenShift">OpenShift</dp-search-filter-item>
         <dp-search-filter-item group="rhd_taxonomy_product" facet="rhd_taxonomy_product" key="codeready" value="codeready" name="CodeReady">CodeReady</dp-search-filter-item>
@@ -45,7 +45,7 @@ scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
         <dp-search-filter-item slot="secondary" group="rhd_taxonomy_product" facet="rhd_taxonomy_product" key="kit" value="kit" name="kit">kit</dp-search-filter-item>
         <dp-search-filter-item slot="secondary" group="rhd_taxonomy_product" facet="rhd_taxonomy_product" key="platform" value="platform" name="platform">platform</dp-search-filter-item>
     </dp-search-filter-group>
-    <dp-search-filter-group name="PRODUCT LINE" key="product_line">
+    <dp-search-filter-group name="Product line" key="product_line">
         <dp-search-filter-item group="product_line" facet="rhd_taxonomy_product_line" key="rhel" value="rhel" name="rhel">rhel</dp-search-filter-item>
         <dp-search-filter-item group="product_line" facet="rhd_taxonomy_product_line" key="openshift" value="openshift" name="openshift">openshift</dp-search-filter-item>
         <dp-search-filter-item group="product_line" facet="rhd_taxonomy_product_line" key="codeready" value="codeready" name="codeready">codeready</dp-search-filter-item>
@@ -56,7 +56,7 @@ scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
         <dp-search-filter-item slot="secondary" group="product_line" facet="rhd_taxonomy_product_line" key="automation" value="automation" name="automation">automation</dp-search-filter-item>
         <dp-search-filter-item slot="secondary" group="product_line" facet="rhd_taxonomy_product_line" key="process" value="process" name="process">process</dp-search-filter-item>
     </dp-search-filter-group>
-    <dp-search-filter-group name="TOPIC" key="topic">
+    <dp-search-filter-group name="Topic" key="topic">
         <dp-search-filter-item group="topic" facet="rhd_taxonomy_topic" key="linux" value="linux" name="Linux">Linux</dp-search-filter-item>
         <dp-search-filter-item group="topic" facet="rhd_taxonomy_topic" key="containers" value="containers" name="Containers">Containers</dp-search-filter-item>
         <dp-search-filter-item group="topic" facet="rhd_taxonomy_topic" key="kubernetes" value="kubernetes" name="Kubernetes">Kubernetes</dp-search-filter-item>
@@ -141,8 +141,8 @@ scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
 <!--
 <dp-search-app url="https://dcp2.jboss.org/v2/rest/search/developer_materials">
 <dp-search-box slot="query"></dp-search-box>
-<dp-search-filters title="Filter By" slot="filters">
-    <dp-search-filter-group name="CONTENT TYPE" name="type">
+<dp-search-filters title="Filter by" slot="filters">
+    <dp-search-filter-group name="Content Type" name="type">
         <dp-search-filter-item group="type" key="article" value="article" name="Article">Article</dp-search-filter-item>
         <dp-search-filter-item group="type" key="webpage" value="webpage" name="webpage">webpage</dp-search-filter-item>
         <dp-search-filter-item group="type" key="video_resource" value="video_resource" name="video_resource">video_resource</dp-search-filter-item>
@@ -162,7 +162,7 @@ scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
         <dp-search-filter-item group="type" key="katacoda_course" value="katacoda_course" name="katacoda_course">katacoda_course</dp-search-filter-item>
         <dp-search-filter-item group="type" key="landing_page_single_offer" value="landing_page_single_offer" name="SOLP">SOLP</dp-search-filter-item>
     </dp-search-filter-group>
-    <dp-search-filter-group name="PRODUCT" name="product">
+    <dp-search-filter-group name="Product" name="product">
         <dp-search-filter-item group="rhd_taxonomy_product" facet="rhd_taxonomy_product" key="application" value="application" name="application">application</dp-search-filter-item>
         <dp-search-filter-item group="rhd_taxonomy_product" facet="rhd_taxonomy_product" key="openshift" value="openshift" name="openshift">openshift</dp-search-filter-item>
         <dp-search-filter-item group="rhd_taxonomy_product" facet="rhd_taxonomy_product" key="codeready" value="codeready" name="codeready">codeready</dp-search-filter-item>
@@ -175,7 +175,7 @@ scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
         <dp-search-filter-item group="rhd_taxonomy_product" facet="rhd_taxonomy_product" key="platform" value="platform" name="platform">platform</dp-search-filter-item>
         <dp-search-filter-item group="rhd_taxonomy_product" facet="rhd_taxonomy_product" key="rhel" value="rhel" name="rhel">rhel</dp-search-filter-item>
     </dp-search-filter-group>
-    <dp-search-filter-group name="PRODUCT LINE" key="product_line">
+    <dp-search-filter-group name="Product line" key="product_line">
         <dp-search-filter-item group="product_line" facet="rhd_taxonomy_product_line" key="middleware" value="middleware" name="middleware">middleware</dp-search-filter-item>
         <dp-search-filter-item group="product_line" facet="rhd_taxonomy_product_line" key="codeready" value="codeready" name="codeready">codeready</dp-search-filter-item>
         <dp-search-filter-item group="product_line" facet="rhd_taxonomy_product_line" key="integration" value="integration" name="integration">integration</dp-search-filter-item>
@@ -186,7 +186,7 @@ scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
         <dp-search-filter-item group="product_line" facet="rhd_taxonomy_product_line" key="process" value="process" name="process">process</dp-search-filter-item>
         <dp-search-filter-item group="product_line" facet="rhd_taxonomy_product_line" key="openshift" value="openshift" name="openshift">openshift</dp-search-filter-item>
     </dp-search-filter-group>
-    <dp-search-filter-group name="TOPIC" key="topic">
+    <dp-search-filter-group name="Topic" key="topic">
         <dp-search-filter-item group="topic" facet="rhd_taxonomy_topic" key="linux" value="linux" name="Linux">Linux</dp-search-filter-item>
         <dp-search-filter-item group="topic" facet="rhd_taxonomy_topic" key="microservices" value="microservices" name="Microservices">Microservices</dp-search-filter-item>
         <dp-search-filter-item group="topic" facet="rhd_taxonomy_topic" key="java" value="java" name="Java">Java</dp-search-filter-item>

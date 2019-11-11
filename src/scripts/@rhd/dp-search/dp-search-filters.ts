@@ -10,12 +10,16 @@ export default class DPSearchFilters extends PFElement {
             :host {
                 display: block;
             }
+            .control {
+                border: 2px solid #ededed;
+            }
             .title {
-                background: #e6e7e8; 
-                color: #000;
-                text-transform: uppercase;
-                padding: .5em 1em;
-                font-weight: 600;
+                background: #fafafa; 
+                color: #151515;
+                padding: 16px;
+                line-height: 23px;
+                font-size: 16px;
+                font-weight: 700;
             }
             .cancel { display: none; }
             .showBtn { 
@@ -37,9 +41,7 @@ export default class DPSearchFilters extends PFElement {
                 }
             dp-search-sort-page { display: none; }
             .groups {
-                background-color: #f9f9f9;
-                padding-bottom: 30px;
-                padding-top: 20px;
+
             }
             .active-type {
                 display: flex;
