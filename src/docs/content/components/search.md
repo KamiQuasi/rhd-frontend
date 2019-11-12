@@ -6,7 +6,7 @@ draft: false
 tags: ["component"]
 categories: ["component"]
 weight: 99
-scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
+scripts: ["@patternfly/pfelement/dist/pfelement.umd","@rhd/dp-search/dp-search"]
 ---
 
 {{< code >}}<dp-search-app url="https://api.developers.redhat.com/search/">
@@ -331,7 +331,7 @@ scripts: ["@patternfly/pfelement/pfelement.umd","@rhd/dp-search/dp-search"]
 <a href="#top" id="scroll-to-top"></a>
 <script>
 var inject = document.createElement('script')
-inject.innerText = "System.import('/themes/custom/rhdp//@patternfly/pfelement/pfelement.umd.js');\n"+
+inject.innerText = "System.import('/themes/custom/rhdp//@patternfly/pfelement/dist/pfelement.umd.js');\n"+
 "System.import('/themes/custom/rhdp/js/@fortawesome/fontawesome-svg-core/index.js');\n"+
 "System.import('/themes/custom/rhdp/js/@fortawesome/pro-solid-svg-icons/index.js');\n"+
 "System.import('/themes/custom/rhdp/js/@rhd/dp-search/dp-search-app.js');\n"+
