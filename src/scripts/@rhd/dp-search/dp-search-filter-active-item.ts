@@ -27,11 +27,11 @@ export default class DPSearchFilterActiveItem extends PFElement {
                 padding: .5em .7em;
             }
 
-            svg.svg-inline--fa { 
+            i, svg.svg-inline--fa { 
                 margin-left: .25em;
             }
         </style>
-        <slot></slot><i class="fas fa-times"></i>` : ''}`;
+        <slot></slot><i class="fas fa-times">X</i>` : ''}`;
     }
 
     static get tag() { return 'dp-search-filter-active-item'; }

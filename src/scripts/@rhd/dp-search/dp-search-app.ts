@@ -96,8 +96,8 @@ export default class DPSearchApp extends PFElement {
     connectedCallback() {
         super.connectedCallback();
         super.render();
-        top.document.body.appendChild(this.modal);
-        setTimeout(() => { top.document.body.appendChild(this.urlEle); }, 1000) 
+        //top.document.body.appendChild(this.modal);
+        top.document.body.appendChild(this.urlEle);
     }
 
     static get observedAttributes() { 

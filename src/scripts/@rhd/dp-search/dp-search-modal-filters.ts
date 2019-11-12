@@ -146,12 +146,12 @@ export default class DPSearchModalFilters extends PFElement {
         if(this._toggle) {
             this.shadowRoot.querySelector('.cover').className = 'cover modal';
             window.scrollTo(0,0);
-            document.body.style.overflow = 'hidden';
+            top.document.body.style.overflow = 'hidden';
             this.style.height = window.innerHeight + 'px';
             this.style.display = 'block';
         } else {
             this.shadowRoot.querySelector('.cover').className = 'cover';
-            document.body.style.overflow = 'auto';
+            top.document.body.style.overflow = 'auto';
             this.style.display = 'none';
         }
     }
@@ -165,7 +165,7 @@ export default class DPSearchModalFilters extends PFElement {
     connectedCallback() {
         super.connectedCallback();
         this.addGroups();
-
+        top.document.body.appendChild(this);
         this.shadowRoot.addEventListener('click', e => {
             let evt = { bubbles: true, composed: true };
             switch (e.target['className']) {

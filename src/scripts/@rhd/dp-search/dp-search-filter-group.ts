@@ -15,6 +15,7 @@ export default class DPSearchFilterGroup extends PFElement {
                 cursor: pointer;
                 display: block;
                 position: relative;
+                padding: 0 16px;
             }
             .primary, .secondary {
                 padding-left: 8px;
@@ -25,9 +26,11 @@ export default class DPSearchFilterGroup extends PFElement {
             }
 
             h6 {
+                font-size: 16px;
                 font-weight: 700;
                 padding: 16px 0;
                 color: #72767b;
+                margin: 0;
             }
 
             .toggle {
