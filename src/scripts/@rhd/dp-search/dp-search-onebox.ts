@@ -7,19 +7,30 @@ export default class DPSearchOneBox extends PFElement {
         ${this.feature ? `
         <style>
         :host {
-            border: 1px solid #EDEDED;
+            border: 2px solid #D5D5D5;
             display: block;
             margin-bottom: 3em;
             padding: 25px;
         }
         h4 {
-            font-size: 27px;
-            color: #242424;
+            color: #0066CC;
+            font-family: Overpass;
+            font-size: 24px;
             font-weight: 600;
-            line-height: 1.5;
+            line-height: 29px;
+            text-align: left;
             margin-bottom: 16px;
             margin-top: 16px;
-        }    
+        }   
+        h5 {
+            color: #656565;
+            font-family: Overpass;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 14px;
+            text-align: left;
+            margin: 8px 0;
+        } 
         p { 
             margin-bottom: 20px; 
             font-size: 16px;
@@ -123,13 +134,9 @@ export default class DPSearchOneBox extends PFElement {
     </div>
     <div class="expand">
     ${this.feature && this.feature.meta && this.feature.meta.length > 0 ? `
+        <pfe-tabs>
         ${this.feature.meta.map(item =>  this.metaTemplate`${item}${this.feature.id}`).join('')}
-    ` : ''}
-        <ul>
-        <li>Option 1</li>
-        <li>Option 2</li>
-        <li>Option 3</li>
-        </ul>
+        </pfe-tabs>` : ''}
     </div>
     ` : ''}`;
     }
@@ -197,7 +204,14 @@ export default class DPSearchOneBox extends PFElement {
     }
 
     metaTemplate = (strings, item, id) => {
-        return `${item && item.text ? `<li>${item.text}</li>` :''}`;
+        return `${item && item.text ? `
+        <pfe-tab role="heading" slot="tab">${item.text}</pfe-tab>
+        <pfe-tab-panel role="region" slot="panel">
+        <ul>
+        ${item.links.map(lnk =>  `<li><a href="${lnk.url}>${lnk.text}</a></li>`).join('')}
+        </ul>
+        </pfe-tab-panel>
+        ` :''}`;
     }
 
     constructor() {

@@ -46,6 +46,7 @@ export default class DPSearchFilterItem extends PFElement {
                 line-height: 25px;
                 padding-left: 0;
                 font-size: 16px;
+                position:relative;
             }
             
             span { display: inline; font-size: 16px; }
